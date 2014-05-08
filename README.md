@@ -1,0 +1,4 @@
+Stouts.sudo
+===========
+
+Manage sudoers
