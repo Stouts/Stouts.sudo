@@ -1,5 +1,5 @@
 ---
 
 - name: sudo | Update sudoers
-  template: src=sudoers.j2 dest=/etc/sudoers owner=root group=root mode=0644
+  template: src=sudoers.j2 dest=/etc/sudoers owner=root group=root mode=0400
   tags: [sudo]
