@@ -7,6 +7,7 @@ Ansible role which manage sudoers file
 
 #### Variables
 ```yaml
+sudo_enabled: yes                               # Enable role
 sudo_users: []                                  # A list of users who have sudo access
 sudo_groups: [admin, sudo]                      # A list of groups who have sudo access
 sudo_passwordless: [admin, sudo]                # A list of group/user names which have NOPASSD

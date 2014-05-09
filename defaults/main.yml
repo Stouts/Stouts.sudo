@@ -1,5 +1,6 @@
 ---
 
+sudo_enabled: yes
 sudo_users: []
 sudo_groups: [admin, sudo]
 sudo_passwordless: [admin, sudo]
