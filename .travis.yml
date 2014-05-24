@@ -25,6 +25,6 @@ script:
 
   - sudo cat /etc/sudoers | grep Ansible || exit 1
 
-sudo_users: travis
+sudo_users: [travis]
 sudo_passwordless: [admin, sudo, travis]
 
