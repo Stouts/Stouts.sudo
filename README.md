@@ -27,7 +27,7 @@ Example:
 - hosts: all
 
   roles:
-    - st.sudo
+    - Stouts.sudo
 
   vars:
     sudo_users: [klen]
