@@ -16,10 +16,6 @@ script:
   # First run
   - ansible-playbook -i inventory test.yml --connection=local --sudo
 
-  # Check
-  - ansible-playbook -i inventory test.yml --connection=local --sudo
-  - ansible-playbook -i inventory test.yml --connection=local --sudo
-
   # Second run Idempotence test
   - >
     ansible-playbook -i inventory test.yml --connection=local --sudo
@@ -28,4 +24,7 @@ script:
     || (echo 'Idempotence test: fail' && exit 1)
 
   - sudo cat /etc/sudoers | grep Ansible || exit 1
+
+sudo_users: travis
+sudo_passwordless: [admin, sudo, travis]
 
