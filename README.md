@@ -1,7 +1,9 @@
 Stouts.sudo
 ===========
 
-[![Build Status](https://travis-ci.org/Stouts/Stouts.sudo.png)](https://travis-ci.org/Stouts/Stouts.sudo)
+[![Build Status](http://img.shields.io/travis/Stouts/Stouts.sudo.svg?style=flat-square)](https://travis-ci.org/Stouts/Stouts.sudo)
+[![Galaxy](http://img.shields.io/badge/galaxy-Stouts.sudo-blue.svg?style=flat-square)](https://galaxy.sudo.com/list#/roles/842)
+[![Tag](http://img.shields.io/github/tag/Stouts/Stouts.sudo.svg?style=flat-square)]()
 
 Ansible role which manage sudoers file
 
