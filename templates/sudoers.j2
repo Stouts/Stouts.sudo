@@ -19,4 +19,11 @@ root ALL=(ALL) ALL
 %{{ group }} ALL=(ALL) {% if group in sudo_passwordless %}NOPASSWD:{% endif %}ALL
 {% endfor %}
 
+{% if sudo_passwordless_command is defined %}
+# Allow An Unprivileged User/Group To Run A Certain Command 
+{% for sudo_item in sudo_passwordless_command -%}
+{{ sudo_item.name }} ALL=(ALL) {% if sudo_item.name in sudo_passwordless %}NOPASSWD:{% endif %}{{ sudo_item.command }}
+{% endfor %}
+{% endif %}
+
 {% if sudo_include_sudoersd %}#includedir /etc/sudoers.d{% endif %}
