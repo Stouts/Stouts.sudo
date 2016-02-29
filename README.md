@@ -16,6 +16,9 @@ sudo_passwordless: [admin, sudo]                # A list of group/user names whi
 sudo_agent_forwarding: no                       # Preserve `SSH_AUTH_SOCK` when sudoing
 sudo_defaults: [!lecture, tty_tickets, !fqdn]   # List of default entries for configuration
 sudo_include_sudoersd: no                       # Include /etc/sudoers.d directory
+sudo_passwordless_command:                      # Give abilitty sudo restart rights for someuser to restart fpm
+                            - name: someuser
+                              command: "sudo /usr/sbin/service fpm restart"
 ```
 
 #### Usage
