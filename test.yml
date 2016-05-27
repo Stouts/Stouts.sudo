@@ -1,5 +1,5 @@
 - hosts: all
-  sudo: yes
+  become: yes
   tasks:
     - include: tasks/main.yml
   vars_files:
