@@ -1,4 +1,11 @@
 ---
-
 - name: sudo | Update sudoers
-  template: src=sudoers.j2 dest=/etc/sudoers owner=root group=root mode=0440
+  template:
+    src: sudoers.j2
+    dest: /etc/sudoers
+    owner: root
+    group: root
+    mode: 0440
+    validate: "visudo -cf %s"
+    backup: true
+  notify: reset connection
