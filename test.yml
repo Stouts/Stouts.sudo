@@ -1,7 +1,7 @@
+---
 - hosts: all
-  become: yes
-  tasks:
-    - import_tasks: tasks/main.yml
-  vars_files:
-    - defaults/main.yml
-    - .travis.yml
+  become: true
+  roles:
+    - role: .
+      sudo_users: [travis]
+      sudo_passwordless: [admin, sudo, travis]
