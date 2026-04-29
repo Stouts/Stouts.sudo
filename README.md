@@ -14,7 +14,7 @@ sudo_users: []                                  # A list of users who have sudo 
 sudo_groups: [admin, sudo]                      # A list of groups who have sudo access
 sudo_passwordless: [admin, sudo]                # A list of group/user names which have NOPASSD
 sudo_agent_forwarding: no                       # Preserve `SSH_AUTH_SOCK` when sudoing
-sudo_defaults: [!lecture, tty_tickets, !fqdn]   # List of default entries for configuration
+sudo_defaults: [!lecture, !fqdn]   # List of default entries for configuration
 sudo_include_sudoersd: no                       # Include /etc/sudoers.d directory
 sudo_passwordless_command:                      # Give abilitty sudo restart rights for someuser to restart fpm
                             - name: someuser
