@@ -1,13 +1,9 @@
 ---
-
-sudo_enabled: yes
+sudo_enabled: true
 sudo_users: []
 sudo_groups: [admin, sudo]
 sudo_passwordless: [admin, sudo]
-sudo_agent_forwarding: no
+sudo_agent_forwarding: false
 sudo_defaults: ['!lecture', '!fqdn']
-sudo_include_sudoersd: no
-
-#sudo_passwordless_command : 
-#                            - name: someuser
-#                              command: "/usr/bin/whoami"
+sudo_include_sudoersd: false
+sudo_passwordless_command: []
