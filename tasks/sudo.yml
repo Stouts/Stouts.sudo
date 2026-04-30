@@ -1,4 +1,16 @@
 ---
+- name: sudo | Install sudo package
+  ansible.builtin.apt:
+    name: sudo
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: sudo | Install sudo package (RedHat)
+  ansible.builtin.yum:
+    name: sudo
+    state: present
+  when: ansible_os_family == "RedHat"
+
 - name: sudo | Update sudoers
   ansible.builtin.template:
     src: sudoers.j2
